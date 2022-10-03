@@ -19,37 +19,38 @@ import visitas
 def main():
 
     cities = [
-    'Oradea', 'Zerind', 'Arad', 'Sibiu',
-                'Timisoara', 'Lugoj', 'Mehadia', 'Dobreta',
-                'Craiova', 'Rimnicu Vilcea', 'Fagaras', 'Pitesti',
-                'Bucharest', 'Giurgiu', 'Urziceni','Hirsova',
-                'Eforie', 'Vaslui', 'Iasi', 'Neamt']
+    'Oradea', 'Zerind', 'Arad', 'Sibiu', 'Timisoara', 'Lugoj', 'Mehadia',
+    'Dobreta', 'Craiova', 'Rimnicu Vilcea', 'Fagaras', 'Pitesti',
+    'Bucharest', 'Giurgiu', 'Urziceni','Hirsova', 'Eforie', 'Vaslui',
+    'Iasi', 'Neamt']
 
-    print()
-    print(" ======= Ciudades Disponibles ======")
-    print()
+    print("\n ======= Ciudades Disponibles ======\n\n")
     print(cities)
-
 
     flag = False
     while(flag == False):
         print()
         start = input('Ingresa el punto de partida: ')
-        end = input('Ingresa el destino: ')
-        if((start in cities) and (end in cities)):
+        #end = input('Ingresa el destino: ') Llegara directo a Bucharest
+        if(start in cities):
             flag = True
-    print()
+    print("\n")
 
     numNodes = len(cities)
     numEdges = 23
     directed = False
     cost = True
+    straight_Cost = {'Arad':366, 'Bucharest':0, 'Craiova':160, 'Dobreta':242,
+        'Eforie':161, 'Fagaras':178, 'Giurgiu':77, 'Hirsova':151, 'Iasi':226,
+        'Lugoj':244, 'Mehadia':241, 'Neamt':234, 'Oradea':380, 'Pitesti':98,
+        'Rimnicu Vilcea':193, 'Sibiu':253, 'Timisoara':329, 'Urziceni':80, 'Vaslui':199,
+        'Zerind':374}
 
-    Camino = costos(numNodes, numEdges, directed, cost)
+    Camino = costos(numNodes, numEdges, directed, cost, straight_Cost)
     Camino.start_costos(sorted(cities))
     #Rumania.printcostos()
 
-    visitas.visitas(Camino, start, end, 0, start)
+    visitas.visitas(Camino, start, 0, start) #end,
 
 
 

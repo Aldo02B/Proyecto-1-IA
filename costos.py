@@ -6,13 +6,14 @@ class costos:
     num_Edges = 0
     directed = False
     cost = False
+    straight_Cost = {}
 
-
-    def __init__(self, numNodes, numEdges, directed, cost):
+    def __init__(self, numNodes, numEdges, directed, cost, straight_Cost):
         self.num_Nodes = numNodes
         self.num_Edges = numEdges
         self.directed = directed
         self.cost = cost
+        self.straight_Cost = straight_Cost
 
     def start_costos(self, cities):
         self.add_cities(cities)
