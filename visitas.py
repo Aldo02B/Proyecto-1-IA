@@ -4,7 +4,7 @@ trajectory = []
 
 globCity = ''
 
-def visitas(objcostos, strCurrentCity, minDistance, strStart): #strDestiny
+def visitas(objcostos, strCurrentCity, minDistance, strStart, end): #strDestiny
     global visit, trajectory, globCity
 
     visit.append(strCurrentCity) #Se añade la ciudad a visitados.

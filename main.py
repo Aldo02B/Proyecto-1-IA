@@ -31,7 +31,7 @@ def main():
     while(flag == False):
         print()
         start = input('Ingresa el punto de partida: ')
-        #end = input('Ingresa el destino: ') Llegara directo a Bucharest
+        end = "Bucharest"
         if(start in cities):
             flag = True
     print("\n")
@@ -50,7 +50,7 @@ def main():
     Camino.start_costos(sorted(cities))
     #Rumania.printcostos()
 
-    visitas.visitas(Camino, start, 0, start) #end,
+    visitas.visitas(Camino, start, 0, start, end) #end,
 
 
 
