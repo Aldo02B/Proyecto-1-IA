@@ -112,8 +112,3 @@ class costos:
         self.nodes[19].adjacent_Nodes.append({'Oradea':71})
         self.nodes[19].adjacent_Nodes.append({'Arad':75})
 
-
-    def printcostos(self):
-        for i in self.nodes:
-            print(i.ciudad, ' -> ', end ='')
-            print(i.adjacent_Nodes)

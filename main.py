@@ -1,19 +1,6 @@
-"""
-
-NOSOTROS REALIZAMOS DOS CÓDIGOS, YA QUE EL QUE CORRESPONDE LINUX VA CON EL MÉTODO GRÁFICO, CREANDO
-UN GRAFO PARA EL MAPA.
-
-EL DE WINDOWS SOLO SE MUESTRA EN PANTALLA LAS CIUDADES EN LAS QUE SE PUEDE VIAJAR
-
-"""
-
-
-
 from nodo import *
 from costos import *
 import visitas
-
-
 
 
 def main():
@@ -48,11 +35,8 @@ def main():
 
     Camino = costos(numNodes, numEdges, directed, cost, straight_Cost)
     Camino.start_costos(sorted(cities))
-    #Rumania.printcostos()S
 
     visitas.visitas(Camino, start, 0, start ,end)
-
-
 
 
 if __name__ == '__main__':
