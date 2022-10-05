@@ -48,9 +48,9 @@ def main():
 
     Camino = costos(numNodes, numEdges, directed, cost, straight_Cost)
     Camino.start_costos(sorted(cities))
-    #Rumania.printcostos()
+    #Rumania.printcostos()S
 
-    visitas.visitas(Camino, start, 0, start, end) #end,
+    visitas.visitas(Camino, start, 0, start ,end)
 
 
 
