@@ -1,3 +1,4 @@
+from turtle import st
 from nodo import *
 from costos import *
 import visitas
@@ -36,7 +37,14 @@ def main():
     Camino = costos(numNodes, numEdges, directed, cost, straight_Cost)
     Camino.start_costos(sorted(cities))
 
-    visitas.visitas(Camino, start, 0, start ,end)
+    if(start == "Bucharest"):
+        print('Trayectoria: ', start)
+        print('El costo total es: ', Camino.straight_Cost.get(start))
+        return
+    else:
+        print('Ciudad inicial', start)
+        print('Costo: ', Camino.straight_Cost.get(start))
+        visitas.visitas(Camino, start, 0, start ,end)
 
 
 if __name__ == '__main__':
